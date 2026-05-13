@@ -44,7 +44,7 @@ const AboutSection = () => {
               About <span className="text-gradient">Me</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-              Front-end developer with experience in Angular, React, TypeScript, JavaScript, and scalable web application development.
+              Web Developer with experience in Angular, React, TypeScript, JavaScript, and scalable web application development.
             </p>
           </div>
 
@@ -76,7 +76,7 @@ const AboutSection = () => {
                 </div>
 
                 <p className="text-muted-foreground leading-relaxed">
-                  Front-end developer experienced in building responsive and modular applications using Angular, TypeScript, JavaScript, HTML, CSS, Bootstrap, and React.
+                  Web Developer experienced in building responsive and modular applications using Angular, TypeScript, JavaScript, HTML, CSS, Bootstrap, and React.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   Worked with REST APIs, RxJS, NgRx, authentication systems, and performance optimization, with additional backend exposure in Node.js, Express.js, and MongoDB.

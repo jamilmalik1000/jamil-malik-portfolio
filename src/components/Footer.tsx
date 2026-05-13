@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Heart } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -22,17 +22,15 @@ const Footer = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
-            {/* Brand */}
             <div className="space-y-4">
               <a href="#" className="font-display text-xl font-bold text-gradient">
-                DevPortfolio
+                Jamil Malik
               </a>
               <p className="text-muted-foreground text-sm">
-                Building digital experiences that make a difference. Let's create something amazing together.
+                Web Developer focused on Angular, React, TypeScript, and scalable web application development.
               </p>
             </div>
 
-            {/* Quick Links */}
             <div className="space-y-4">
               <h4 className="font-semibold">Quick Links</h4>
               <ul className="space-y-2">
@@ -49,12 +47,11 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Social */}
             <div className="space-y-4">
               <h4 className="font-semibold">Connect</h4>
               <div className="flex gap-3">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/jamilmalik1000"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-foreground transition-all duration-300"
@@ -62,7 +59,7 @@ const Footer = () => {
                   <Github size={18} />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/jamil-malik-6643b1282/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-foreground transition-all duration-300"
@@ -70,21 +67,18 @@ const Footer = () => {
                   <Linkedin size={18} />
                 </a>
                 <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="mailto:jamilmalik2500@gmail.com"
                   className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-foreground transition-all duration-300"
                 >
-                  <Twitter size={18} />
+                  <Mail size={18} />
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Copyright */}
           <div className="pt-8 border-t border-border text-center">
-            <p className="text-muted-foreground text-sm flex items-center justify-center gap-1">
-              © {currentYear} DevPortfolio. Made with <Heart size={14} className="text-primary fill-primary" /> All rights reserved.
+            <p className="text-muted-foreground text-sm">
+              © {currentYear} Jamil Malik. All rights reserved.
             </p>
           </div>
         </div>
