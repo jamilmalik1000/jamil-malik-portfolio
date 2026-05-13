@@ -3,10 +3,16 @@ import { Send, Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
+
+const serviceOptions = [
+  { value: "frontend-development", label: "Frontend Development" },
+  { value: "angular-application-development", label: "Angular Application Development" },
+  { value: "backend-api-integration", label: "Backend API Integration" },
+  { value: "authentication-performance", label: "Authentication & Performance" },
+  { value: "other", label: "Other" },
+];
 
 const ContactSection = () => {
-  const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -26,13 +32,20 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    const selectedService =
+      serviceOptions.find((service) => service.value === formData.service)?.label || "Not specified";
+    const whatsappMessage = [
+      "Hello Jamil,",
+      "",
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      `Service: ${selectedService}`,
+      "",
+      `Message: ${formData.message}`,
+    ].join("\n");
+    const whatsappUrl = `https://wa.me/923405766340?text=${encodeURIComponent(whatsappMessage)}`;
 
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
 
     setFormData({ name: "", email: "", service: "", message: "" });
     setIsSubmitting(false);
@@ -71,8 +84,8 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <a href="mailto:hello@johndoe.com" className="font-medium hover:text-primary transition-colors">
-                      hello@johndoe.com
+                    <a href="mailto:jamilmalik2500@gmail.com" className="font-medium hover:text-primary transition-colors">
+                      jamilmalik2500@gmail.com
                     </a>
                   </div>
                 </div>
@@ -83,8 +96,8 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Phone</p>
-                    <a href="tel:+1234567890" className="font-medium hover:text-primary transition-colors">
-                      +1 (234) 567-890
+                    <a href="tel:+923405766340" className="font-medium hover:text-primary transition-colors">
+                      +92-3405766340
                     </a>
                   </div>
                 </div>
@@ -95,7 +108,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Location</p>
-                    <p className="font-medium">San Francisco, CA</p>
+                    <p className="font-medium">Islamabad,Pakistan</p>
                   </div>
                 </div>
               </div>
@@ -148,11 +161,11 @@ const ContactSection = () => {
                     className="w-full h-10 px-3 rounded-lg bg-secondary/50 border border-border text-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
                   >
                     <option value="">Select a service</option>
-                    <option value="web-development">Web Development</option>
-                    <option value="shopify">Shopify Development</option>
-                    <option value="wordpress">WordPress Development</option>
-                    <option value="seo">SEO & Maintenance</option>
-                    <option value="other">Other</option>
+                    {serviceOptions.map((service) => (
+                      <option key={service.value} value={service.value}>
+                        {service.label}
+                      </option>
+                    ))}
                   </select>
                 </div>
 

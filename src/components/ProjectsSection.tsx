@@ -36,7 +36,7 @@ const projects = [
     category: "React",
     tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/jamilmalik1000/jamil-malik-portfolio.git",
   },
 ];
 
