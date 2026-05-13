@@ -1,73 +1,46 @@
-import { useState } from "react";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const categories = ["All", "React", "Shopify", "WordPress"];
-
 const projects = [
   {
-    title: "E-Commerce Dashboard",
-    description: "A comprehensive dashboard for managing online stores with real-time analytics and inventory management.",
+    title: "Where Works",
+    description: "A frontend web application focused on responsive UI, reusable components, API integration, and scalable structure.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-    category: "React",
-    tech: ["React", "TypeScript", "Tailwind CSS", "Chart.js"],
-    liveUrl: "#",
-    githubUrl: "#",
+    category: "Angular",
+    tech: ["Angular", "TypeScript", "RxJS", "Bootstrap"],
+    liveUrl: "https://whereworks.vercel.app/login",
+    githubUrl: "https://github.com/jamilmalik1000/WhereWorks.git",
   },
   {
-    title: "Fashion Store",
-    description: "A modern Shopify store for a fashion brand with custom theme and seamless checkout experience.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop",
-    category: "Shopify",
-    tech: ["Shopify", "Liquid", "JavaScript", "CSS"],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    title: "Tech Blog",
-    description: "A high-performance WordPress blog with custom theme and optimized for SEO and speed.",
-    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=400&fit=crop",
-    category: "WordPress",
-    tech: ["WordPress", "PHP", "MySQL", "JavaScript"],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    title: "Task Management App",
-    description: "A collaborative project management tool with real-time updates and team features.",
+    title: "Halqa",
+    description: "An Angular-based application improved with OnPush change detection, HTTP interceptors, and better RxJS subscription handling.",
     image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
+    category: "Angular",
+    tech: ["Angular", "OnPush", "RxJS", "HTTP Interceptors"],
+    liveUrl: "",
+    githubUrl: "#",
+  },
+  {
+    title: "Teachify",
+    description: "A backend-driven learning platform with REST APIs, authentication, modular routing, and MongoDB data management.",
+    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=400&fit=crop",
+    category: "Backend",
+    tech: ["Node.js", "Express.js", "MongoDB", "JWT"],
+    liveUrl: "",
+    githubUrl: "#",
+  },
+  {
+    title: "Portfolio Website",
+    description: "A personal portfolio website built to present projects, skills, and experience with a modern responsive interface.",
+    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
     category: "React",
-    tech: ["React", "Node.js", "MongoDB", "Socket.io"],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    title: "Organic Foods Store",
-    description: "An eco-friendly Shopify store with subscription features and delivery tracking.",
-    image: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&h=400&fit=crop",
-    category: "Shopify",
-    tech: ["Shopify", "Liquid", "JavaScript", "Stripe"],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    title: "Restaurant Website",
-    description: "A beautiful WordPress website for a restaurant with online ordering and reservations.",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
-    category: "WordPress",
-    tech: ["WordPress", "Elementor", "WooCommerce", "PHP"],
+    tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
     liveUrl: "#",
     githubUrl: "#",
   },
 ];
 
 const ProjectsSection = () => {
-  const [activeCategory, setActiveCategory] = useState("All");
-
-  const filteredProjects = activeCategory === "All"
-    ? projects
-    : projects.filter((project) => project.category === activeCategory);
-
   return (
     <section id="projects" className="py-20 lg:py-32">
       <div className="container mx-auto px-4 lg:px-8">
@@ -78,30 +51,13 @@ const ProjectsSection = () => {
               Featured <span className="text-gradient">Projects</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              A selection of my recent work across different platforms
+              A few selected projects based on my frontend and backend experience
             </p>
-          </div>
-
-          {/* Filter Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 mb-12">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  activeCategory === category
-                    ? "bg-gradient-primary text-primary-foreground"
-                    : "bg-secondary text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
           </div>
 
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {filteredProjects.map((project, index) => (
+            {projects.map((project, index) => (
               <div
                 key={index}
                 className="group bg-card/50 rounded-2xl overflow-hidden border border-border hover:border-primary/30 transition-all duration-500 hover:shadow-glow"
@@ -144,12 +100,14 @@ const ProjectsSection = () => {
 
                   {/* Links */}
                   <div className="flex gap-3">
-                    <Button variant="hero" size="sm" className="flex-1" asChild>
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink size={16} />
-                        Live Demo
-                      </a>
-                    </Button>
+                    {project.liveUrl && (
+                      <Button variant="hero" size="sm" className="flex-1" asChild>
+                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink size={16} />
+                          Live Demo
+                        </a>
+                      </Button>
+                    )}
                     <Button variant="outline" size="sm" asChild>
                       <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                         <Github size={16} />

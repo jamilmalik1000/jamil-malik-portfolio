@@ -2,6 +2,7 @@ const skills = [
   { name: "HTML5", icon: "🌐", category: "Frontend" },
   { name: "CSS3", icon: "🎨", category: "Frontend" },
   { name: "JavaScript", icon: "⚡", category: "Frontend" },
+    { name: "Angular", icon: "⚡", category: "Frontend" },
   { name: "TypeScript", icon: "📘", category: "Frontend" },
   { name: "React", icon: "⚛️", category: "Frontend" },
   { name: "Node.js", icon: "🟢", category: "Backend" },
@@ -44,12 +45,12 @@ const SkillsSection = () => {
             ))}
           </div>
 
-          {/* Additional Skills Bar */}
+          {/* Additional Skills Bar
           <div className="mt-16 text-center">
             <p className="text-muted-foreground mb-6">
               Also experienced with: PHP, Laravel, REST APIs, GraphQL, Docker, AWS, Firebase, Figma
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

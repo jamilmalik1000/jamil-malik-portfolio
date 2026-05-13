@@ -1,4 +1,4 @@
-import { ArrowDown, Github, Linkedin, Twitter } from "lucide-react";
+import { ArrowDown, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -21,31 +21,28 @@ const HeroSection = () => {
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "-3s" }} />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-float animate-delay-neg-3000" />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           {/* Main Heading */}
           <h1
-            className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-up"
-            style={{ animationDelay: "0.1s" }}
+            className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-up animate-delay-100"
           >
             Hi, I'm <span className="text-gradient">Jamil Malik</span>
           </h1>
 
           {/* Role */}
           <p
-            className="font-display text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-6 animate-fade-up"
-            style={{ animationDelay: "0.2s" }}
+            className="font-display text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-6 animate-fade-up animate-delay-200"
           >
             MERN & MEAN Stack Developer
           </p>
 
           {/* Description */}
           <p
-            className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 animate-fade-up leading-relaxed"
-            style={{ animationDelay: "0.3s" }}
+            className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 animate-fade-up animate-delay-300 leading-relaxed"
           >
             Full Stack Developer skilled in
             <span className="text-primary font-medium"> Angular</span>,
@@ -87,8 +84,7 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div
-            className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up"
-            style={{ animationDelay: "0.5s" }}
+            className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up animate-delay-500"
           >
             <Button variant="hero" size="xl" onClick={scrollToContact}>
               Hire Me
@@ -101,7 +97,7 @@ const HeroSection = () => {
         </div>
 
         {/* Social Links */}
-        <div className="flex justify-center gap-4 animate-fade-up" style={{ animationDelay: "0.5s" }}>
+        <div className="flex justify-center gap-4 animate-fade-up animate-delay-500">
           <a
             href="https://github.com/jamilmalik1000"
             target="_blank"

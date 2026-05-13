@@ -1,30 +1,34 @@
-import { Code, ShoppingCart, Globe, Search, ArrowRight } from "lucide-react";
+import { Code, Layout, Database, ShieldCheck, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const services = [
   {
+    icon: Layout,
+    title: "Frontend Development",
+    description:
+      "Responsive and modern user interfaces built with Angular, React, TypeScript, HTML, CSS, and Bootstrap.",
+    features: ["Angular", "React", "TypeScript", "Responsive UI"],
+  },
+  {
     icon: Code,
-    title: "Web Development",
-    description: "Custom web applications built with modern technologies like React, TypeScript, and Node.js. Fast, scalable, and maintainable code.",
-    features: ["React & Next.js", "TypeScript", "REST & GraphQL APIs", "Database Design"],
+    title: "Angular Application Development",
+    description:
+      "Scalable Angular applications with reusable components, RxJS data handling, NgRx state management, and clean architecture.",
+    features: ["RxJS", "NgRx", "Reusable Components", "Lazy Loading"],
   },
   {
-    icon: ShoppingCart,
-    title: "Shopify Development",
-    description: "Professional Shopify stores that convert. Custom themes, app integrations, and performance optimization.",
-    features: ["Custom Themes", "App Integration", "Payment Setup", "Inventory Management"],
+    icon: Database,
+    title: "Backend API Integration",
+    description:
+      "REST API integration and backend collaboration using Node.js, Express.js, MongoDB, and secure data flow practices.",
+    features: ["REST APIs", "Node.js", "Express.js", "MongoDB"],
   },
   {
-    icon: Globe,
-    title: "WordPress Development",
-    description: "Beautiful, fast WordPress websites with custom themes and plugins. Optimized for performance and SEO.",
-    features: ["Custom Themes", "Plugin Development", "WooCommerce", "Speed Optimization"],
-  },
-  {
-    icon: Search,
-    title: "SEO & Maintenance",
-    description: "Keep your website running smoothly with regular updates, security patches, and SEO optimization.",
-    features: ["Technical SEO", "Performance Audits", "Security Updates", "Content Strategy"],
+    icon: ShieldCheck,
+    title: "Authentication & Performance",
+    description:
+      "Authentication flows, route guards, interceptors, and performance improvements for stable and efficient web applications.",
+    features: ["JWT/Auth", "Route Guards", "HTTP Interceptors", "OnPush Optimization"],
   },
 ];
 
@@ -46,7 +50,7 @@ const ServicesSection = () => {
               My <span className="text-gradient">Services</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Comprehensive web development solutions tailored to your business needs
+              Development services based on my frontend and backend experience
             </p>
           </div>
 
