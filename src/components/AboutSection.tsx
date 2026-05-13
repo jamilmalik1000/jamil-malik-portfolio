@@ -2,31 +2,34 @@ import { Calendar, MapPin, Briefcase, GraduationCap } from "lucide-react";
 
 const timeline = [
   {
-    year: "2023 - Present",
-    title: "Senior Web Developer",
-    company: "Freelance",
-    description: "Building custom e-commerce solutions and web applications for clients worldwide.",
+    year: "Dec 2025 - May 2026",
+    title: "Front End Developer",
+    company: "Syntecx Solution",
+    description:
+      "Worked with React, Angular, TypeScript, RxJS, NgRx, REST APIs, and responsive UI development.",
     icon: Briefcase,
   },
   {
-    year: "2021 - 2023",
-    title: "Full Stack Developer",
-    company: "Tech Startup",
-    description: "Led development of multiple SaaS products using React, Node.js, and cloud technologies.",
+    year: "Apr 2026 - May 2026",
+    title: "Angular Developer",
+    company: "Halqa",
+    description:
+      "Focused on OnPush, custom directives and pipes, HTTP interceptors, and RxJS optimization.",
     icon: Briefcase,
   },
   {
-    year: "2019 - 2021",
-    title: "Frontend Developer",
-    company: "Digital Agency",
-    description: "Developed responsive websites and Shopify stores for various clients.",
+    year: "Jan 2025 - Nov 2025",
+    title: "Backend Developer",
+    company: "Teachify",
+    description:
+      "Built backend systems with Node.js, Express.js, MongoDB, JWT auth, and modular APIs.",
     icon: Briefcase,
   },
   {
-    year: "2015 - 2019",
-    title: "Bachelor's in Computer Science",
-    company: "University",
-    description: "Graduated with honors, focusing on web technologies and software engineering.",
+    year: "Jun 2025 - Aug 2025",
+    title: "Frontend Trainee",
+    company: "AJK IT Board",
+    description: "Worked with React, components, and core frontend development fundamentals.",
     icon: GraduationCap,
   },
 ];
@@ -36,71 +39,65 @@ const AboutSection = () => {
     <section id="about" className="py-20 lg:py-32 bg-card/30">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               About <span className="text-gradient">Me</span>
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Passionate developer with 5+ years of experience creating digital experiences
+            <p className="text-muted-foreground text-lg max-w-xl mx-auto">
+              Front-end developer with experience in Angular, React, TypeScript, JavaScript, and scalable web application development.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-            {/* Bio Section */}
             <div className="space-y-6">
               <div className="relative">
                 <div className="w-48 h-48 md:w-64 md:h-64 rounded-2xl bg-gradient-primary p-1 mx-auto lg:mx-0">
-                  <div className="w-full h-full rounded-2xl bg-secondary flex items-center justify-center">
-                    <span className="text-6xl">👨‍💻</span>
-                  </div>
+                  <img
+                    src="/IMG-20231104-WA0047-01-removebg-preview (1).png"
+                    alt="Jamil Malik"
+                    className="w-full h-full rounded-2xl bg-secondary object-cover"
+                  />
                 </div>
                 <div className="absolute -bottom-4 -right-4 lg:right-auto lg:left-40 w-24 h-24 bg-primary/20 rounded-full blur-2xl" />
               </div>
 
               <div className="space-y-4 text-center lg:text-left">
-                <h3 className="font-display text-2xl font-semibold">John Doe</h3>
-                
+                <h3 className="font-display text-2xl font-semibold">Jamil Malik</h3>
+
                 <div className="flex flex-wrap gap-4 justify-center lg:justify-start text-sm text-muted-foreground">
                   <span className="flex items-center gap-2">
                     <MapPin size={16} className="text-primary" />
-                    San Francisco, CA
+                    Muzaffarabad, AJK
                   </span>
                   <span className="flex items-center gap-2">
                     <Calendar size={16} className="text-primary" />
-                    5+ Years Experience
+                    2025 - 2026 Experience
                   </span>
                 </div>
 
                 <p className="text-muted-foreground leading-relaxed">
-                  I'm a passionate software engineer specializing in building exceptional digital experiences. 
-                  My focus is on creating fast, accessible, and visually appealing websites that help businesses grow.
+                  Front-end developer experienced in building responsive and modular applications using Angular, TypeScript, JavaScript, HTML, CSS, Bootstrap, and React.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, 
-                  or sharing knowledge with the developer community.
+                  Worked with REST APIs, RxJS, NgRx, authentication systems, and performance optimization, with additional backend exposure in Node.js, Express.js, and MongoDB.
                 </p>
               </div>
             </div>
 
-            {/* Timeline */}
             <div className="space-y-6">
               <h3 className="font-display text-xl font-semibold text-center lg:text-left mb-8">
                 My Journey
               </h3>
               <div className="relative">
-                {/* Timeline Line */}
                 <div className="absolute left-6 top-0 bottom-0 w-px bg-border" />
 
                 <div className="space-y-8">
                   {timeline.map((item, index) => (
                     <div key={index} className="relative pl-16">
-                      {/* Icon */}
                       <div className="absolute left-0 w-12 h-12 rounded-full bg-secondary border border-border flex items-center justify-center">
                         <item.icon size={20} className="text-primary" />
                       </div>
 
-                      {/* Content */}
                       <div className="bg-card/50 rounded-xl p-5 border border-border hover:border-primary/30 transition-colors duration-300">
                         <span className="text-xs font-medium text-primary">{item.year}</span>
                         <h4 className="font-semibold mt-1">{item.title}</h4>

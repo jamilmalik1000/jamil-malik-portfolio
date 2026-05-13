@@ -47,19 +47,16 @@ const HeroSection = () => {
             className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 animate-fade-up leading-relaxed"
             style={{ animationDelay: "0.3s" }}
           >
-            I build scalable, high-performance web applications using
+            Full Stack Developer skilled in
             <span className="text-primary font-medium"> Angular</span>,
             <span className="text-primary font-medium"> React</span>,
             <span className="text-primary font-medium"> Node.js</span>, and
-            <span className="text-primary font-medium"> MongoDB</span>.
-            Experienced in RESTful APIs, state management with
-            <span className="text-primary font-medium"> NgRx & RxJS</span>,
-            authentication systems, reusable component architecture, and
-            responsive UI development.
+            <span className="text-primary font-medium"> MongoDB</span>,
+            building scalable and responsive web applications.
           </p>
 
           {/* Skills */}
-          <div
+          {/* <div
             className="flex flex-wrap justify-center gap-3 mb-12 animate-fade-up"
             style={{ animationDelay: "0.4s" }}
           >
@@ -86,7 +83,7 @@ const HeroSection = () => {
                 {skill}
               </span>
             ))}
-          </div>
+          </div> */}
 
           {/* CTA Buttons */}
           <div
