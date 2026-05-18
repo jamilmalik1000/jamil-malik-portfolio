@@ -1,4 +1,4 @@
-import { Code, Layout, Database, ShieldCheck, ArrowRight } from "lucide-react";
+import { Bot, Code, Layout, Database, ShieldCheck, ShoppingBag, Layers3, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const services = [
@@ -22,6 +22,27 @@ const services = [
     description:
       "REST API integration and backend collaboration using Node.js, Express.js, MongoDB, and secure data flow practices.",
     features: ["REST APIs", "Node.js", "Express.js", "MongoDB"],
+  },
+  {
+    icon: ShoppingBag,
+    title: "Shopify Store Development",
+    description:
+      "Custom Shopify storefronts, theme updates, product-focused landing pages, and conversion-oriented e-commerce experiences.",
+    features: ["Shopify Themes", "Liquid", "Storefront Customization", "E-commerce UX"],
+  },
+  {
+    icon: Layers3,
+    title: "SaaS Application Development",
+    description:
+      "End-to-end SaaS application development with scalable architecture, clean dashboards, subscription-ready flows, and product-focused user experiences.",
+    features: ["SaaS Platforms", "Admin Dashboards", "Scalable Architecture", "Product UX"],
+  },
+  {
+    icon: Bot,
+    title: "AI-Powered App Development",
+    description:
+      "Intelligent web applications with AI-driven workflows, automation, smart assistants, and seamless integration into modern product experiences.",
+    features: ["AI Integrations", "Automation", "Smart Assistants", "Workflow Enhancement"],
   },
   {
     icon: ShieldCheck,
